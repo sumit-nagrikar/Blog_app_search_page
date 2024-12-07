@@ -1,0 +1,181 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+/* Search container*/
+.search-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.search-title {
+  text-align: center;
+  color: #007BFF;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Search bar */
+.search-bar {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures that input and button have space between them */
+  margin-bottom: 30px; /* Added space between search bar and filter */
+}
+
+/* Search Input */
+.search-bar input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  transition: border 0.3s ease;
+  box-sizing: border-box; /* Ensures padding is within width */
+}
+
+/* Focused State for Search Input */
+.search-bar input:focus {
+  border-color: #007BFF;
+}
+
+/* Search Button */
+.search-bar button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover State for Search Button */
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Filter dropdown */
+.filter-dropdown {
+  margin-bottom: 20px;
+}
+
+.filter-dropdown select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Blog container */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Blog card */
+.blog-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.blog-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* No blogs message */
+.no-blogs-message {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .search-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .search-bar {
+    width: 90%;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+
+  .search-bar button {
+    font-size: 14px;
+  }
+
+  .blog-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .blog-card {
+    padding: 15px;
+  }
+
+  .blog-card h2 {
+    font-size: 16px;
+  }
+
+  .blog-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .search-bar button {
+    border-radius: 4px;
+    width: 100%;
+  }
+}
